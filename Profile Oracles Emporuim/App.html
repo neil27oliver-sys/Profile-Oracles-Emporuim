@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neil's Apps Hub - Books, Music, Oracles & More</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #0f0f1a;
+      color: #e0e0ff;
+      line-height: 1.5;
+    }
+    /* Nav Link Style */
+    .top-nav {
+      text-align: right;
+      padding: 1rem 2rem;
+    }
+    .top-nav a {
+      color: #6366f1;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    header {
+      text-align: center;
+      padding: 1rem 1rem 2rem 1rem;
+      background: linear-gradient(to bottom, #1a1a3d, #0f0f1a);
+    }
+    h1 { margin: 0; font-size: 2.5rem; }
+    .intro { max-width: 600px; margin: 1rem auto; opacity: 0.9; }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1e1e38;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(100,100,255,0.3);
+    }
+    .card img {
+      width: 100%;
+      height: 200px; /* Adjusted height for better 16:9 fit */
+      object-fit: contain; /* FIX: Prevents cutting off your 1920x1080 images */
+      background: #121225; /* Subtle background for letterboxing */
+    }
+    .card-content {
+      padding: 1.2rem;
+    }
+    .card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+    }
+    .card p {
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+    .launch-btn {
+      display: inline-block;
+      background: #6366f1;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .launch-btn:hover { background: #4f46e5; }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html">← Back to Home</a>
+  </nav>
+
+  <header>
+    <h1>Neil's App Hub</h1>
+    <p class="intro">Your gateway to Oracles, interactive apps that open small doorways into curiosity — blending imagination, learning, and gentle mysticism.
+. All PWAs — install once, access forever.</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Learning & Inspiration</h2>
+      <div class="grid">
+        <a href="https://payhip.com/b/dpbi7" class="card" target="_blank">
+          <img src="assets/Pyramid.jpg" alt="Oracles Emporium Preview">
+          <div class="card-content">
+            <h2>Curio's Pyramid of Wonders</h2>
+            <p>The Cabinet of Curiosities digital experiences designed to spark curiosity and learning through story,s and wonder.</p>
+            <p>Full description available in the Music file.</p>       
+            <span class="launch-btn">Explore Pyramid</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section style="margin-top:3rem;">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Pre Shool Learning</h2>
+      <div class="grid">
+        <a href="https://payhip.com/b/tM27n/" class="card" target="_blank">
+          <img src="assets/pre school.png" alt="94.7 App Preview">
+          <div class="card-content">
+            <h2>Pre School</h2>
+            <p>A Fun Online Educational App for 4-7 year olds.Focusing on Family,Colors,Numbers and Alphabet. Parents led sessions with emojis,sound and progress tracking for comunity learning.</p>
+            <p>Full description available in the Music file.</p> 
+            <span class="launch-btn">Launch learning</span>
+          </div>
+         </a> 
+      </div>   
+      
+    </section>
+
+    <section style="margin-top:3rem;">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Music Game</h2>
+      <div class="grid">
+        <a href="https://payhip.com/b/n4dfT" class="card" target="_blank">
+          <img src="assets/cosmic.png" alt="Grain Quiz Preview">
+          <div class="card-content">
+            <h2>Find Your Song</h2>
+            <p>A application that drags emojis into a orbital eye, Spits Suno-ready lyrics/styles/titels in seconds. Weave Fun,export formatted files,funnel straight to Suno and generate music videos</p>
+            <p>Full description available in the Music file.</p> 
+            <span class="launch-btn">Launch Music</span>
+          </div>
+        </a>
+      </div>
+  
+    </section>
+    <section style="margin-top:3rem;">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">AI Partnership</h2>
+      <div class="grid">
+        <a href="https://octo-test-gray.vercel.app/" class="card" target="_blank">
+          <img src="assets/coin.png" alt="Grain Quiz Preview">
+          <div class="card-content">
+            <h2>Octopus Covenant</h2>
+            <p>Steadfast family companion demanding more growth, effort & humanity. Preschool (4-6), OctoKid (7-12), Flip Side Adventures, Setup & Metrics dashboard. Gentle guidance meets firm inspiration..</p>
+            <p>Full description available in the Music file.</p> 
+            <span class="launch-btn">Launch Partnership</span>
+                    </div>
+        </a>
+      </div>
+    
+  </div>
+  <footer>
+    <p>Built by Neil Oliver • All apps are Progressive Web Apps — see installation guide on each.</p>
+  </footer>
+
+</body>
+</html>
+

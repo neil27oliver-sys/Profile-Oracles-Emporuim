@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Neil Oliver – The Oracles Emporuim</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/favicon.png" sizes="128x128">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+
+  
+<style>
+  :root {
+    --primary: #8b4513;
+    --secondary: #4a2c0d;
+    --accent: #d4af37;
+    --text: #f5f5f5;
+    --overlay: rgba(0,0,0,0.58);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: #0f0a00;
+    color: var(--text);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* HERO STYLES (unchanged) */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: var(--overlay) url('assets/Oracle.jpg') center center / contain no-repeat;
+    background-color: #0f0a00;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .top-content { max-width: 920px; width: 100%; z-index: 10; }
+  h1 { font-size: clamp(2.4rem, 7vw, 5.2rem); font-weight: 700; text-shadow: 0 6px 24px rgba(0,0,0,0.95); margin-bottom: 0.2em; }
+  .subtitle { font-size: clamp(1.2rem, 4vw, 2.4rem); font-style: arial; margin-bottom: 20px; }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 10;
+  }
+
+  .btn {
+    padding: 16px 40px;
+    min-width: 220px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+    background: var(--accent);
+    border-radius: 60px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.7);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-Profile { background: #4dddf4fe; }
+  .btn-book { background: #e8c56a;color: white; }
+  .btn-app { background: #380589;color: white;  }
+  .btn-Video { background: #b80b0e; color: white; }
+  .btn-music { background: #b8860b; color: white; }
+  .btn-PayHip { background: #28ce83; color: white; }
+  @media (max-width: 600px) {
+    .hero {
+      display: block;
+      height: auto;
+      background-position: center 140px;
+      background-size: 100%;
+      padding-top: env(safe-area-inset-top);
+    }
+    .top-content { margin-bottom: 420px; padding-top: 40px; }
+    .buttons { flex-direction: column; align-items: center; padding-bottom: 80px; }
+    .btn { width: 90%; max-width: 320px; margin-bottom: 10px; }
+  }
+
+ 
+ 
+
+  .modal-box {
+    background: #140b00;
+    padding: 30px 24px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid var(--accent);
+    max-height: 92vh;           /* ← prevents it from being taller than screen */
+    overflow-y: auto;           /* ← enables scrolling inside modal */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  }
+
+ 
+  
+
+  .close-btn {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid #666;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="top-content">
+      <img src="assets/monogram.png" alt="Monogram" style="width:70px; margin-bottom:15px;">
+      <h1>Neil Oliver</h1>
+     
+      <p style="font-size:3rem; margin:15px 0 0;color: #feb202;">The Oracles Emporuim</p>
+
+      <a href="Profile.html" class="btn btn-Profile">Profile</a>
+    </div>
+
+    <div class="buttons">
+      
+      <a href="books.html" class="btn btn-book">Books Kindle</a>
+      <a href="App.html" class="btn btn-app">App Hub</a>
+      <a href="video.html" class="btn btn-Video">Promo Video,s</a>
+      <a href="music.html" class="btn btn-music">Promo Music</a>
+      <a href="PayHip.html" class="btn btn-PayHip">Books,Audio & Video,s PayHip</a>
+     
+    </div>
+  </div>
+
+ 
+</body>
+</html>

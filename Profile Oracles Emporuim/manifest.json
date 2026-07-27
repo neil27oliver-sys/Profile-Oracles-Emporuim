@@ -1,0 +1,39 @@
+{
+  "name": "Neil Oliver – Books & Music",
+  "short_name": "Neil Oliver",
+  "description": "An impossible library of 40+ books and 100+ original songs by Neil Oliver.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0f0a00",
+  "theme_color": "#0f0a00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["books", "music", "entertainment"],
+  "screenshots": [
+    {
+      "src": "assets/BM.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "The Library Home"
+    }
+  ]
+}

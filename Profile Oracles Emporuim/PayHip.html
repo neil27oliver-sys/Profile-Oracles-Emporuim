@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neil Oliver - The Oracles Emporium Store</title>
+  <link rel="icon" type="image/png" href="favicon.ico"> <!-- optional -->
+
+  <style>
+    :root {
+      --primary: #09f1e9;
+      --secondary: #0e067a;
+      --accent: #ffd700;
+      --bg: #f8fafc;
+      --card: white;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 0 0 30px 30px;
+      margin: -20px -20px 50px;
+    }
+    h1 { margin: 0; font-size: 3rem; }
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .book-card {
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-align: center;
+      padding: 20px 15px;
+    }
+    .book-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .book-cover {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .book-title {
+      font-size: 1.25rem;
+      margin: 10px 0 8px;
+      color: var(--secondary);
+      font-weight: bold;
+    }
+    .btn {
+      display: block;
+      margin: 15px auto 0;
+      padding: 10px 25px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.4rem; }
+      .books-grid { grid-template-columns: 1fr; }
+    }
+     .back-btn-container {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.5rem;
+    }
+
+    .back-btn {
+      padding: 0.8rem 1.6rem;
+      background: var(--gold);
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      transition: all 0.25s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    .back-btn:hover {
+      background: #e6c567;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(212,175,55,0.4);
+    }
+  </style>
+  <header>
+  <div class="back-btn-container">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+</head>
+<body>
+
+  <header>
+    <h1>Neil Oliver</h1>
+    <p style="font-size:1.4rem; margin:15px 0 0;">Childrens Books,Audio Books,Music and Video Files – Available Now on PayHip</p>
+  </header>
+
+  <div class="intro">
+    <p>Welcome to my collection . This collection is for families to enjoy together.</p>
+    <p>Click any cover below to jump straight to the The Oracles Emporium Store.</p>
+    
+  </div>
+
+  <div class="books-grid">
+
+    <!-- Example 1: The Creativity Vault (from your link) -->
+    <div class="book-card">
+      <img src="assets/Cats.jpg" 
+           alt="The Creativity Vault Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Video The Cabinet of Curiosities: Amazing Animals We Know "Why Cats Always Land on Their Feet"</div>
+      <a href="https://payhip.com/b/5khLZ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+
+    <!-- Example 2: Placeholder for one of your other links -->
+    <div class="book-card">
+      <img src="assets/JeansVideo.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Video The Cabinet of Curiosities: Wonders of Everyday Life : "The Story of Jeans (Blue Jeans)"</div>
+      <a href="https://payhip.com/b/4eREJ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="book-card">
+      <img src="assets/CoinsVideo.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Video The Cabinet of Curiosities: Wonders of Everyday Life : "Why Are Coins Round"</div>
+      <a href="https://payhip.com/b/ADbZk" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/2.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Cabinet of Curiosities: Wonders of Everyday Life</div>
+      <a href="https://payhip.com/b/UCJEe" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Gold Coin.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life : "Why Are Coins Round"</div>
+      <a href="https://payhip.com/b/5w3Ry" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+      <div class="book-card">
+      <img src="assets/MacinToss.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "The Mackintosh Raincoat"</div>
+      <a href="https://payhip.com/b/3JBAT" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Pencil.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "Where Does the Pencil Come From "</div>
+      <a href="https://payhip.com/b/gtMWb" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Jeans (1).jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "The Story of Jeans (Blue Jeans) "</div>
+      <a href="https://payhip.com/b/wo6nN" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Icecream.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "Who Invented Ice Cream"</div>
+      <a href="https://payhip.com/b/jO0F9" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Paper.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "The Amazing Journey of Paper"</div>
+      <a href="https://payhip.com/b/q6Ocz" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Chocolate.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "The Surprise Story of Chocolate"</div>
+      <a href="https://payhip.com/b/dtWi7" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Umbrella.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "Why Do We Have Umbrellas"</div>
+      <a href="https://payhip.com/b/IJgt6" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Toothbruch.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "The Secret Life of the Toothbrush"</div>
+      <a href="https://payhip.com/b/tR3hE" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Bubblegum.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of Everyday Life "Where Did Bubblegum Come From"</div>
+      <a href="https://payhip.com/b/ES3cm" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/3.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Cabinet of Curiosities: Secrets of How Things Move</div>
+      <a href="https://payhip.com/b/lCY1H" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Wheel.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "Why Is the Wheel Round"</div>
+      <a href="https://payhip.com/b/5KBPL" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Zipper.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "Who Invented the Zipper"</div>
+      <a href="https://payhip.com/b/pIDJC" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Velcto.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "The Story of Velcro"</div>
+      <a href="https://payhip.com/b/t03V8" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Bicycle.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "The Bicycle’s Wild Ride"</div>
+      <a href="https://payhip.com/b/e9fyi" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Sail Boat.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "How Did the Sailboat Change the World"</div>
+      <a href="https://payhip.com/b/dKAHS" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Compass.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "The Magic of the Compass"</div>
+      <a href="https://payhip.com/b/WTBif" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Shoes.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "Why Do Shoes Have Laces"</div>
+      <a href="https://payhip.com/b/UTQqd" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Rollerskate.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "The Roller Skate Adventure</div>
+      <a href="https://payhip.com/b/RJSA8" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+    <div class="book-card">
+      <img src="assets/Ballons.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "How Balloons Took to the Sky"</div>
+      <a href="https://payhip.com/b/DBhMv" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+  </div>
+     <div class="book-card">
+      <img src="assets/Shopping Cart.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Secrets of How Things Move "The Curious Case of the Shopping Cart"</div>
+      <a href="https://payhip.com/b/TNECy" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Book3.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Cabinet of Curiosities: Magic of Light, Sound & Ideas</div>
+      <a href="https://payhip.com/b/jZntz" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/LightBulb.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "Where Did the Light Bulb Really Come</div>
+      <a href="https://payhip.com/b/uySlJ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Telephone.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "The Story of the Telephone"</div>
+      <a href="https://payhip.com/b/D81EM" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Books.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "How Books Changed Everything"</div>
+      <a href="https://payhip.com/b/LtDdu" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Radio .jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "The Radio’s Invisible Waves"</div>
+      <a href="https://payhip.com/b/oM9eP" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Clocks.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "Why Do We Have Clocks"</div>
+      <a href="https://payhip.com/b/qKPRO" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Camera.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "The Camera’s Eye"</div>
+      <a href="https://payhip.com/b/FRt05" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Glass.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "The Incredible Journey of Glass"</div>
+      <a href="https://payhip.com/b/wQTWG" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Stamps.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "How Did Postage Stamps Stick the World Together"</div>
+      <a href="https://payhip.com/b/hBfyG" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Barcode.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "How The Barcode Breakthrough"</div>
+      <a href="https://payhip.com/b/bZFuQ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Chip.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Magic of Light, Sound & Ideas "The Magic of the Computer Chip"</div>
+      <a href="https://payhip.com/b/eT6pj" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Book4.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Book 4 Cabinet of Curiosities: Wonders of the Natural World</div>
+      <a href="https://payhip.com/b/H6vV7" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Apple.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "The Journey of the Apple"</div>
+      <a href="https://payhip.com/b/1Cmf6" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Flowers.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "Why Do Flowers Have Colours"</div>
+      <a href="https://payhip.com/b/SKjs1" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Grass.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "The Secret Life of Grass"</div>
+      <a href="https://payhip.com/b/DMm7L" target="_blank" rel="noopener noreferrer" class="btn">
+        View on Payhip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Tamato.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "How Tomatoes Travelled the World"</div>
+      <a href="https://payhip.com/b/bxYLh" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+    </div>
+     <div class="book-card">
+      <img src="assets/Bamboo.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "The Magic of Bamboo"</div>
+      <a href="https://payhip.com/b/t1E0b" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>  
+    </div>
+     <div class="book-card">
+      <img src="assets/Patato.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Audio The Cabinet of Curiosities: Wonders of the Natural World "The Story of the Potato"</div>
+      <a href="https://payhip.com/b/0RfYk" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>  
+    </div>
+     <div class="book-card">
+      <img src="assets/Foresr.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Secret of the Singing Forest"</div>
+      <a href="https://payhip.com/b/gT1xf" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+      </div>
+     <div class="book-card">
+      <img src="assets/Humm.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music The Hum-The Secret of the Singing Forest"</div>
+      <a href="https://payhip.com/b/yhTQG" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+     <div class="book-card">
+      <img src="assets/Miss.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Miss Lily and the Continuous Gradient"</div>
+      <a href="https://payhip.com/b/YKpyn" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>
+     <div class="book-card">
+      <img src="assets/Playground.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music-Miss Lily and the Continuous Gradient"</div>
+      <a href="https://payhip.com/b/rd72b" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+      </div>
+     <div class="book-card">
+      <img src="assets/DOGS.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Dogs Do Not Gamble"</div>
+      <a href="https://payhip.com/b/7FDXA" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+     <div class="book-card">
+      <img src="assets/Dogs dont Gamble.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music-Dogs Do Not Gamble"</div>
+      <a href="https://payhip.com/b/bSH0O" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+     <div class="book-card">
+      <img src="assets/Sticks.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Mystery of the Sticks of Truth"</div>
+      <a href="https://payhip.com/b/L36oB" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+      </div>
+     <div class="book-card">
+      <img src="assets/Sticks.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music-The Mystery of the Sticks of Truth"</div>
+      <a href="https://payhip.com/b/r4m10" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+      </div>
+     <div class="book-card">
+      <img src="assets/Bell.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Song of Marie-Claire"</div>
+      <a href="https://payhip.com/b/3NAOl" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>
+     <div class="book-card">
+      <img src="assets/Bell.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music-The Song of Marie-Claire"</div>
+      <a href="https://payhip.com/b/PX0Za" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+        </div>
+     <div class="book-card">
+      <img src="assets/Rope.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Rope of Unity"</div>
+      <a href="https://payhip.com/b/20GPI" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>
+           <div class="book-card">
+      <img src="assets/Rope.jpeg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Music-The Rope of Unity"</div>
+      <a href="https://payhip.com/b/qE0Yv" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+          <div class="book-card">
+      <img src="assets/CAT COVER.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Yoko’s Song"</div>
+      <a href="https://payhip.com/b/CrFo8" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+          <div class="book-card">
+      <img src="assets/18.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Young & Unstoppable"</div>
+      <a href="https://payhip.com/b/829UQ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+     </div>
+      <div class="book-card">
+      <img src="assets/20.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Currency of Clout"</div>
+      <a href="https://payhip.com/b/ldB2T" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>  
+       <div class="book-card">
+      <img src="assets/21.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">The Vibe of Truth"</div>
+      <a href="https://payhip.com/b/W7ST5" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>  
+        <div class="book-card">
+      <img src="assets/Yoko Song.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Yoko Song"</div>
+      <a href="https://payhip.com/b/qviQJ" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div> 
+        <div class="book-card">
+      <img src="assets/pre school.png" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">PRE SCHOOL APP Link"</div>
+      <a href="https://payhip.com/b/tM27n" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>
+         <div class="book-card">
+      <img src="assets/Pyramid.jpg" 
+           alt="Book Cover" class="book-cover"
+           onerror="this.src='https://via.placeholder.com/160x240?text=Book+Cover';">
+      <div class="book-title">Curio's Pyramid of Wonders App Link"</div>
+      <a href="https://payhip.com/b/dpbi7" target="_blank" rel="noopener noreferrer" class="btn">
+        View on PayHip
+      </a>
+       </div>   
+       
+     
+     
+        
+     
+      
+      
+
+
+      
+
+      
+  <footer>
+    © 2026 Neil Oliver • All books & Music monetized via PayHip • 
+    <a href="index.html" style="color:var(--primary);">Back to App Home</a><br>
+    
+  </footer>
+
+</body>
+</html>

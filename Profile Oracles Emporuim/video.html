@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neil Oliver – Video | Books & Music</title>
+
+  <style>
+    :root {
+      --gold:     #d4af37;
+      --dark-bg:  #0f0a00;
+      --card:     #1e1400;
+      --text:     #f5e8c0;
+      --muted:    #b89a5f;
+      --border:   #8b6f47;
+      --red-warm: #8b4513;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #1a0f00, #0f0a00);
+      padding: 2rem 1rem 1.5rem;
+      text-align: center;
+      border-bottom: 3px solid var(--gold);
+      position: relative;
+    }
+
+    .back-btn-container {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.5rem;
+    }
+
+    .back-btn {
+      padding: 0.8rem 1.6rem;
+      background: var(--gold);
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.05rem;
+      transition: all 0.25s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      color: var(--gold);
+      margin: 0;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Video Display Area */
+    .video-viewport {
+      width: 100%;
+      background: #000;
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      max-height: 500px; /* Keeps it from getting too tall on desktops */
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-selection { background: var(--gold); color: #111; }
+    .btn-random    { background: var(--red-warm); color: white; }
+
+    .track-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .track {
+      background: var(--card);
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-left: 4px solid transparent;
+    }
+
+    .track-playing {
+      border-left-color: var(--gold);
+      background: #332200;
+    }
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--gold);
+    }
+
+    #nowPlaying {
+      text-align: center;
+      color: var(--gold);
+      font-style: italic;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="back-btn-container">
+    <a href="index.html" class="back-btn">← Back</a>
+  </div>
+  <h1>Neil Oliver – Videos</h1>
+</header>
+
+<main>
+  <div class="video-viewport">
+    <video id="videoPlayer" controls poster="assets/poster.jpg">
+       Your browser does not support the video tag.
+    </video>
+    <p id="nowPlaying">Select a video to begin</p>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-selection" onclick="playSelection()">Play Selection</button>
+    <button class="btn btn-random" onclick="playRandom()">Shuffle Selected</button>
+  </div>
+
+  <div class="track-list" id="trackList">
+    </div>
+</main>
+
+<script>
+  const tracks = [
+    { title: "Oracel Emporuim Promo 1", src: "assets/Video 1 Final.mp4" },
+    { title: "Oracel Emporuim Promo 2", src: "assets/Video 2 Final.mp4" },
+    { title: "Oracel Emporuim Promo 3", src: "assets/Video 3 Final.mp4" },
+    { title: "Oracel Emporuim Promo 4", src: "assets/EMPORUIM.mp4" },
+    { title: "The Cabinet of Curiosities Promo 1", src: "assets/CabenitShort.mp4" },
+    { title: "The Cabinet of Curiosities Promo 2", src: "assets/Cabinet Long.mp4" },
+    { title: "OctoKid Promo 1", src: "assets/OCTOGROK.mp4" },
+    { title: "OctoKid Promo 2", src: "assets/OCTO.mp4" },
+    { title: "Cosmic Weave Promo", src: "assets/Comic Video.mp4" },
+    { title: "Promo The Secret of the Singing Forest 1", src: "assets/The Secrets.mp4" },
+    { title: "Promo The Secret of the Singing Forest 2", src: "assets/The_Hum_Music_Video_with_Glow.mp4" },
+    { title: "Promo Yoko,s Song", src: "assets/Yoko.mp4" },
+    { title: "Promo Currency of Clout", src: "assets/Currency of Clout.mp4" },
+    { title: "Promo The Rope of Unity", src: "assets/ROPE.mp4" },
+    { title: "Promo The Mystery of the Sticks of Truth", src: "assets/Sticks.mp4" },
+    { title: "Promo Young and Unstopabble", src: "assets/Young.mp4" },
+    { title: "Promo Song of Marie-Claire", src: "assets/Marie.mp4" },     
+    { title: "Promo A World by Neil Oliver", src: "assets/A World by Neil Oliver.mp4" },
+  
+
+    
+
+
+
+
+    
+    // Add more videos here
+  ];
+
+  const video = document.getElementById('videoPlayer');
+  const nowPlaying = document.getElementById('nowPlaying');
+  const trackList = document.getElementById('trackList');
+
+  let currentIndex = -1;
+  let playbackMode = 'none';
+
+  // Build list
+  tracks.forEach((track, index) => {
+    const div = document.createElement('div');
+    div.className = 'track';
+    div.innerHTML = `
+      <input type="checkbox" id="track-${index}" />
+      <label for="track-${index}" style="flex:1; cursor:pointer;">
+        <div class="track-title">${track.title}</div>
+      </label>
+    `;
+    trackList.appendChild(div);
+  });
+
+  function getSelectedIndices() {
+    return Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+      .map(cb => parseInt(cb.id.split('-')[1]));
+  }
+
+  function playTrack(index) {
+    if (index < 0 || index >= tracks.length) return;
+    currentIndex = index;
+    video.src = tracks[index].src;
+    video.play().catch(e => console.log("Video play blocked:", e));
+    nowPlaying.textContent = `Now Watching: ${tracks[index].title}`;
+    
+    document.querySelectorAll('.track').forEach(t => t.classList.remove('track-playing'));
+    if (trackList.children[index]) trackList.children[index].classList.add('track-playing');
+  }
+
+  function playSelection() {
+    const selected = getSelectedIndices();
+    if (selected.length === 0) return alert("Select a video first!");
+    playbackMode = 'selection';
+    playTrack(selected[0]);
+  }
+
+  function playRandom() {
+    const selected = getSelectedIndices();
+    if (selected.length === 0) return alert("Select some videos to shuffle!");
+    playbackMode = 'random-selected';
+    const randomIdx = selected[Math.floor(Math.random() * selected.length)];
+    playTrack(randomIdx);
+  }
+
+  video.addEventListener('ended', () => {
+    if (playbackMode === 'none') return;
+    const selected = getSelectedIndices();
+    if (selected.length === 0) return;
+
+    let nextIndex;
+    if (playbackMode === 'selection') {
+      const pos = selected.indexOf(currentIndex);
+      nextIndex = pos < selected.length - 1 ? selected[pos + 1] : selected[0];
+    } else {
+      nextIndex = selected[Math.floor(Math.random() * selected.length)];
+    }
+    playTrack(nextIndex);
+  });
+</script>
+
+</body>
+</html>
